@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불확도 계산기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('로비 백그라운드.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        /* 배경 위에 직접 배치되는 버튼들 */
+        .btn {
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .btn-calculator { background-color: #040077; }
+        .btn-about { background-color: #20209d; }
+        .btn-importance { background-color: #4b75eb; }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* 제목 스타일 */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <button class="btn btn-calculator" onclick="location.href='calculator.html'">불확도 계산기</button>
+    <button class="btn btn-about" onclick="location.href='불확도란.html'">불확도란?</button>
+    <button class="btn btn-importance" onclick="location.href='불확도중요.html'">불확도가 왜 중요할까?</button>
+
+    <script>
+        // 배경 이미지 로드 실패시 대체 배경
+        document.body.onerror = function() {
+            document.body.style.background = `
+                linear-gradient(135deg, #6B73FF 0%, #000DFF 100%)
+            `;
+        };
+    </script>
+</body>
+</html>
